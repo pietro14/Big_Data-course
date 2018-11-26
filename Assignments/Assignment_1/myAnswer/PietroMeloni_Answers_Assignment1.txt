@@ -1,0 +1,48 @@
+PIETRO MELONI - ASSIGNMENT 1
+Commands start with the $ sign:
+		
+	Step 	1.	$ cd ~ 
+			$ mkdir Assignment_1
+		 
+		2.	$ cd Assignment_1
+			$ mkdir INPUT OUTPUT
+
+			I could have done this way as well:
+
+			$ mkdir -p Assignment_1/{INPUT, OUTPUT}	                      (This way I can create more directories with an only command)
+			
+		3.	$ cd INPUT/
+			$ wget http://ssgac.org/documents/SWB_Full.txt.gz
+		      
+		4.	$ cp SWB_Full.txt.gz Mydata.txt.gz                            (I am already in the INPUT directory)
+			
+		5.	$ zcat Mydata.txt.gz | head -n20
+
+		6.	$ gunzip Mydata.txt.gz
+
+   		7.	$ wc -l Mydata.txt
+	
+		8. 	$ grep "rs10830206" Mydata.txt
+	
+		9.	$ cut -f1 Mydata.txt > ./../OUTPUT/SNPID.txt                   (I am still in the INPUT directory) 
+ 
+		10.     $ tail -n100 SNPID.txt | sort > ./../OUTPUT/100_SNPs.txt       (Still in the INPUT directory)
+
+		11.     $ echo "My name is Pietro"
+
+		12. 	$ history > ./../OUTPUT/History.txt                            (Still in the INPUT directory)     
+	
+		13. 	$ less History.txt
+	
+		14. 	$ cd ../OUTPUT                                       
+			$ tar -cf PietroMeloni.tar History.txt 100_SNPs.txt
+
+	
+
+
+
+ 
+
+
+
+
