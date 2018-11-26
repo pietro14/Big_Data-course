@@ -3,5 +3,6 @@ This directory contains the following documentation on the summer course Big Dat
   - Course Syllabus
   - Assignements
   - Grades
+  
 More information can be found here: https://bachelors.vu.amsterdam/en/summer-school/courses/bigdatamanagementandanalyisisinlinux/index.aspx
   
