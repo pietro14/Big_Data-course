@@ -1,0 +1,24 @@
+Assignment 2
+NAME: Meloni Pietro
+(all the commands start with the $ sign)
+
+                (Starting from the INPUT directory)
+
+1.      $ sed 's/ /\t/g' SWB_Full_garbled.txt > ../OUTPUT/SWB_Full_garbled_tab.txt
+
+2.      $ awk -F" " '{print $1,$2,$3,$4,$5,$6,$7,$8}' OFS="\t" \
+          > SWB_Full_garbled.txt > ../OUTPUT/SWB_Full_garbled_tab.txt
+
+3.      $ cd ../OUTPUT; sed -i 's/':'/\t/g' SWB_Full_garbled_tab.txt
+
+4.      $ sed -i 's/ChrPosID/CHR\tPOS/g' SWB_Full_garbled_tab.txt
+
+5.      $ awk -F"\t" '{print $1,$2,$3, toupper($4),toupper($5),$6,$7,$8,$9}' \
+          > OFS="\t" SWB_Full_garbled_tab.txt > SWB_Full_garbled_tab_UpCase.txt
+
+6.      $ awk -F"\t" 'NR==1{print "MarkerName", $1, $2, $4, $5, "EAF", "Beta", $7, $9} \
+          > NR>1{print $3, $1, $2, $4, $5, $8, $6, $7, $9}' OFS="\t" \
+          > SWB_Full_garbled_tab_UpCase.txt > SWB_Full_Final.txt
+
+7.      $ mkdir ../CODE; vim ../CODE/PietroMeloni.txt
+                        (since I have to create the file I could do: touch ../CODE/PietroMeloni.txt and then open it with vim)
